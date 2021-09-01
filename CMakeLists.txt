@@ -19,7 +19,7 @@ target_link_libraries(
     # This alone should work
     PUBLIC main_lib_impl
     # This is needed for the 'main_exe' target to compile
-    # INTERFACE "$<TARGET_OBJECTS:main_lib_impl>"
+    INTERFACE "$<TARGET_OBJECTS:main_lib_impl>"
 )
 
 add_executable(main_exe source/main.c)
